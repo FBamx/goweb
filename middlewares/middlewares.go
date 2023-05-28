@@ -56,7 +56,7 @@ func GinLogger() gin.HandlerFunc {
 		if c.Writer.Status() != 200 {
 			// 记录异常信息
 			zap.L().Info(path,
-				zap.Int("statusxixixixi", c.Writer.Status()),
+				zap.Int("status", c.Writer.Status()),
 				zap.String("method", c.Request.Method),
 				zap.String("path", path),
 				zap.String("query", query),
