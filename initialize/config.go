@@ -21,5 +21,5 @@ func InitConfig() {
 	}
 	// 传递给全局变量
 	global.Settings = serverConfig
-	color.Blue("goweb start...")
+	color.Blue("init config...")
 }

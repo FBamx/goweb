@@ -1,0 +1,2 @@
+2023-05-28T22:07:15.893+0800	INFO	middlewares/middlewares.go:58	/v1/user/list3	{"statusxixixixi": 404, "method": "GET", "path": "/v1/user/list3", "query": "", "ip": "172.29.128.1", "user-agent": "PostmanRuntime-ApipostRuntime/1.1.0", "errors": "", "cost": "21.759µs"}
+2023-05-28T22:07:44.071+0800	INFO	middlewares/middlewares.go:58	/v1/user/list33	{"statusxixixixi": 404, "method": "GET", "path": "/v1/user/list33", "query": "", "ip": "172.29.128.1", "user-agent": "PostmanRuntime-ApipostRuntime/1.1.0", "errors": "", "cost": "28.339µs"}

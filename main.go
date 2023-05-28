@@ -2,21 +2,22 @@ package main
 
 import (
 	"fmt"
-	"github.com/gin-gonic/gin"
-	"goweb/controllers"
 	"goweb/global"
 	"goweb/initialize"
-	"goweb/middlewares"
+
+	"github.com/fatih/color"
+	"go.uber.org/zap"
 )
 
 func main() {
 	initialize.InitConfig()
+	initialize.InitLogger()
 
-	r := gin.Default()
-	r.Use(middlewares.Cors())
-	login := r.Group("/auth")
-	login.POST("/login", controllers.Login)
-	login.GET("/test", controllers.Test)
+	Router := initialize.Routers()
+	color.Cyan("goweb start...")
+	err := Router.Run(fmt.Sprintf(":%d", global.Settings.Port))
+	if err != nil {
+		zap.L().Info("this is hello func", zap.String("error", "启动错误"))
+	}
 
-	r.Run(fmt.Sprintf(":%d", global.Settings.Port))
 }
